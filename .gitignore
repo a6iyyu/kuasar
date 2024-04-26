@@ -15,7 +15,6 @@ dist-ssr/
 .env.production.local
 *.local
 *.log
-index.css
 .pnp.js
 !.vscode/extensions.json
 .idea
