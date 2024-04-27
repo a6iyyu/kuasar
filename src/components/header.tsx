@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Header: React.FC = () => {
   const [headerSticky, setHeaderSticky] = useState(false);
-  const menus = ["About", "Summary", "Search"];
+  const menus: string[] = ["About", "Summary", "Search"];
 
   const handleHeaderSticky = () => {
     if (window.scrollY > 5) {
@@ -30,9 +30,11 @@ const Header: React.FC = () => {
           </a>
         </section>
         <section className="flex h-full w-3/5 items-center justify-end">
-          {menus.map((menu) => (
+          {menus.map((menu, i) => (
             <h5
               style={{ letterSpacing: "0.1rem" }}
+              key={i}
+              id={menu.toLowerCase()}
               className="cursor-pointer text-lg font-medium text-gray-50 transition-all duration-300 ease-in-out hover:text-gray-300 hover:underline"
             >
               {menu}

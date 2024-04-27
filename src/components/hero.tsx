@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           diversity that makes each country so unique.
         </h5>
         <div
-          className="mt-8 h-fit w-fit cursor-pointer rounded-full bg-gray-50 px-9 py-6 font-black text-gray-950 transition-all duration-300 ease-in-out hover:bg-gray-200"
+          className="get-to-know mt-8 h-fit w-fit cursor-pointer rounded-full bg-gray-50 px-9 py-6 font-black text-gray-950 transition-all duration-300 ease-in-out hover:bg-gray-200"
           style={{ boxShadow: "0.3rem 0.3rem 0 #bcbcbc" }}
         >
           GET TO KNOW &nbsp; &#10132;

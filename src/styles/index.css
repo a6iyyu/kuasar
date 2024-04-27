@@ -11,6 +11,15 @@
   padding: 0;
 }
 
+html {
+  scroll-padding: 11rem;
+}
+
+br::selection,
+img::selection {
+  background: none;
+}
+
 @media screen and (max-width: 8192px) {
   ::-webkit-scrollbar {
     display: none;
