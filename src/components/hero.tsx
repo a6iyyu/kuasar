@@ -2,7 +2,10 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <main className="hero mx-auto mb-40 mt-72 flex h-[60rem] w-4/5">
+    <main
+      className="hero mx-auto mb-40 mt-72 flex h-fit w-4/5"
+      style={{ letterSpacing: "0.075rem" }}
+    >
       <section
         className="absolute z-0 h-40 w-40"
         style={{ backgroundColor: "#ff85ad", filter: "blur(9rem)" }}
@@ -19,7 +22,7 @@ const Hero: React.FC = () => {
           className="mt-8 h-fit w-fit cursor-pointer rounded-full bg-gray-50 px-9 py-6 font-black text-gray-950 transition-all duration-300 ease-in-out hover:bg-gray-200"
           style={{ boxShadow: "0.3rem 0.3rem 0 #bcbcbc" }}
         >
-          Get To Know &nbsp; &#10132;
+          GET TO KNOW &nbsp; &#10132;
         </div>
       </section>
     </main>

@@ -6,6 +6,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", Times, sans-serif, serif;
   margin: 0;
   padding: 0;
 }
@@ -20,13 +21,8 @@
 }
 
 @media screen and (max-width: 3120px) {
-  header a,
-  .hero {
-    font-family: "Plus Jakarta Sans", Times, sans-serif, serif;
-    letter-spacing: 0.1rem;
-  }
   header h5:not(header h5:last-child) {
-    margin-right: 7rem;
+    margin-right: 5rem;
   }
   body {
     background-image: linear-gradient(to right, #0c0c1e, #141414);

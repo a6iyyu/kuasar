@@ -5,16 +5,20 @@ import ScrollIndicator from "../components/scroll-indicator";
 import Hero from "../components/hero";
 import Summary from "../components/summary";
 import ScrollToTop from "../components/scroll-to-top";
+import ListOfFacts from "../components/list-of-facts";
+import About from "../components/about";
 
 const App: React.FC = () => {
   return (
-    <body className="flex h-fit w-full flex-col overflow-x-hidden">
+    <>
       <ScrollToTop />
       <Header />
       <ScrollIndicator />
       <Hero />
+      <ListOfFacts />
+      <About />
       <Summary />
-    </body>
+    </>
   );
 };
 

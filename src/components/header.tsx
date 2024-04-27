@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   const menus = ["About", "Summary", "Search"];
 
   const handleHeaderSticky = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 5) {
       setHeaderSticky(true);
     } else {
       setHeaderSticky(false);
@@ -29,9 +29,12 @@ const Header: React.FC = () => {
             />
           </a>
         </section>
-        <section className="flex h-full w-3/5 items-center justify-evenly">
+        <section className="flex h-full w-3/5 items-center justify-end">
           {menus.map((menu) => (
-            <h5 className="cursor-pointer text-lg font-medium text-gray-50 transition-all duration-300 ease-in-out hover:text-gray-300 hover:underline">
+            <h5
+              style={{ letterSpacing: "0.1rem" }}
+              className="cursor-pointer text-lg font-medium text-gray-50 transition-all duration-300 ease-in-out hover:text-gray-300 hover:underline"
+            >
               {menu}
             </h5>
           ))}

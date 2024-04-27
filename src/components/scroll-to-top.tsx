@@ -22,7 +22,7 @@ const ScrollToTop: React.FC = () => {
 
   return (
     <section
-      className={`fixed bottom-16 right-16 grid h-24 w-24 cursor-pointer place-items-center rounded-full bg-gray-100 transition-all duration-300 ease-in-out hover:bg-gray-200 
+      className={`fixed bottom-16 right-16 z-50 grid h-24 w-24 cursor-pointer place-items-center rounded-full bg-gray-100 transition-all duration-300 ease-in-out hover:bg-gray-200 
       ${showScroll ? "visible opacity-100" : "invisible opacity-0"}`}
       onClick={ScrollToTop}
     >
