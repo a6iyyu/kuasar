@@ -2,8 +2,10 @@
 
 <h4 align="justify">
 Rodgen, your trusted travel partner!
+</h4>
 
-In this README, I will explain how to run and test my project. The first thing you do is clone this repository to your library.
+<h4 align="justify">
+This repository aims as my advanced test requirement in the Frontend Developer Internship of Kuasar Company. In this README, I will explain how to run and test my project. The first thing you do is clone this repository to your library.
 
 ```bash
 mkdir project-review
