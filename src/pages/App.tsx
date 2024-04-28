@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import "../styles/tailwind.css";
+import ScrollToTop from "../components/scroll-to-top";
 import Header from "../components/header";
 import ScrollIndicator from "../components/scroll-indicator";
 import Hero from "../components/hero";
-import ScrollToTop from "../components/scroll-to-top";
-import Summary from "../components/list-of-facts";
 import About from "../components/about";
+import ListOfFacts from "../components/list-of-facts";
+import Summary from "../components/summary";
+import Search from "../components/search";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -19,6 +21,10 @@ const App: React.FC = () => {
     const AboutSection = null || (document.querySelector(".about-section") as HTMLElement);
     scrollIntoView(AboutButton, AboutSection);
 
+    const SearchButton = null || (document.getElementById("search") as HTMLElement);
+    const SearchSection = null || (document.querySelector(".search-section") as HTMLElement);
+    scrollIntoView(SearchButton, SearchSection);
+
     const GetToKnow = null || (document.querySelector(".get-to-know") as HTMLElement);
     const ListOfFacts = null || (document.querySelector(".list-of-facts") as HTMLElement);
     scrollIntoView(GetToKnow, ListOfFacts);
@@ -31,7 +37,9 @@ const App: React.FC = () => {
       <ScrollIndicator />
       <Hero />
       <About />
+      <ListOfFacts />
       <Summary />
+      <Search />
     </>
   );
 };

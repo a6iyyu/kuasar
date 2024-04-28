@@ -2,16 +2,16 @@ import React from "react";
 import CountUp from "react-countup";
 import numberLists from "../types/number-lists";
 
-const Summary: React.FC = () => {
+const ListOfFacts: React.FC = () => {
   return (
-    <main className="list-of-facts mx-auto mb-20 flex h-fit w-4/5 justify-between">
+    <main className="list-of-facts mx-auto mb-20 flex h-fit w-4/5 flex-col justify-between lg:flex-row">
       <section
         className="absolute right-0 z-0 h-40 w-40"
         style={{ backgroundColor: "#1fddff", filter: "blur(9rem)" }}
       ></section>
       {numberLists.map((data, i) => (
         <section
-          className="z-10 grid h-full w-1/4 cursor-default place-items-center rounded-xl py-6 text-gray-50"
+          className="z-10 mt-12 grid h-full w-full cursor-default place-items-center rounded-xl py-6 text-gray-50 lg:mt-0 lg:w-[30%]"
           key={i}
           style={{
             backgroundImage: "linear-gradient(to top right, #24201f, #202020)",
@@ -39,7 +39,7 @@ const Summary: React.FC = () => {
             }}
           />
           <h4 className="my-4 text-xl font-semibold">{data.title}</h4>
-          <h5 className="mx-auto my-4 w-4/5 text-justify text-sm font-medium">
+          <h5 className="mx-auto my-4 w-4/5 text-justify text-sm font-medium leading-loose">
             {data.description}
           </h5>
         </section>
@@ -48,4 +48,4 @@ const Summary: React.FC = () => {
   );
 };
 
-export default Summary;
+export default ListOfFacts;

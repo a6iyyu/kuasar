@@ -4,7 +4,8 @@ const ScrollIndicator: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const handleScrollProgress = () => {
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const percentage = (window.scrollY / scrollHeight) * 100;
     setScrollProgress(percentage);
   };
@@ -13,7 +14,7 @@ const ScrollIndicator: React.FC = () => {
 
   return (
     <section
-      className="fixed top-36 z-50 h-1 bg-blue-500"
+      className="fixed top-32 z-50 h-1 bg-blue-500 lg:top-36"
       style={{ width: scrollProgress + "%" }}
     ></section>
   );

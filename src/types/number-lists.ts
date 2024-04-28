@@ -34,7 +34,7 @@ const numberLists: typeNumberLists[] = [
     end: 8e6,
     title: "Humans",
     width: 67.5,
-    description: "Based on data from the World Population Review, the world population reached 8.09 billion on February 28, 2024. This number increased by 0.62% compared to the population in 2023 and jumped by 1 billion in just 11 years.",
+    description: "Based on data from the World Population Review, the world population reached 8.09 billion on 2024. This number increased by 0.62% compared to the population in 2023 and jumped by 1 billion in just 11 years.",
   },
 ];
 
