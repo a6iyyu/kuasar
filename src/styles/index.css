@@ -11,10 +11,6 @@
   padding: 0;
 }
 
-html {
-  scroll-padding: 11rem;
-}
-
 br::selection,
 img::selection {
   background: none;
@@ -30,11 +26,20 @@ img::selection {
 }
 
 @media screen and (max-width: 3120px) {
+  html {
+    scroll-padding: 11rem;
+  }
   header h5:not(header h5:last-child) {
     margin-right: 5rem;
   }
   body {
     background-image: linear-gradient(to right, #0c0c1e, #141414);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    scroll-padding: 9rem;
   }
 }
