@@ -14,7 +14,7 @@ const ScrollIndicator: React.FC = () => {
 
   return (
     <section
-      className="fixed top-32 z-50 h-1 bg-blue-500 lg:top-36"
+      className="fixed top-28 z-50 h-1 bg-blue-500 lg:top-36"
       style={{ width: scrollProgress + "%" }}
     ></section>
   );

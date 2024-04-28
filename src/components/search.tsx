@@ -2,9 +2,53 @@ import React, { useEffect, useState } from "react";
 import ListOfSearch from "./list-of-search";
 
 const Search: React.FC = () => {
+  const [country, setCountry] = useState<any[]>([]);
+  const [fetchError, setFetchError] = useState<boolean>(false);
+  const [filteredCountries, setFilteredCountries] = useState<any[]>([]);
   const [input, setInput] = useState<string>("");
 
-  useEffect(() => {});
+  useEffect(() => {
+    fetch("https://countries.trevorblades.com/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: `
+          query GetCountries {
+            countries {
+              capital
+              code
+              currency
+              emojiU
+              languages {name}
+              name
+            }
+          }
+        `,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCountry(data.data.countries);
+        setFilteredCountries(data.data.countries);
+      })
+      .catch((error) => {
+        console.error("Error: " + error), setFetchError(true);
+      });
+  }, []);
+
+  const HandleSearchFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setInput(searchTerm);
+
+    if (searchTerm) {
+      const filtered = country.filter((country) =>
+        country["name"].toLowerCase().includes(searchTerm),
+      );
+      setFilteredCountries(filtered);
+    } else {
+      setFilteredCountries(country);
+    }
+  };
 
   return (
     <main className="search-section mx-auto h-fit w-4/5">
@@ -23,14 +67,27 @@ const Search: React.FC = () => {
           type="text"
           placeholder="Search . . ."
           className="h-full w-3/4 rounded-full bg-transparent pl-8 text-gray-50 outline-none lg:w-[90%]"
-          onChange={(e) => setInput(e.target.value)}
+          onChange={HandleSearchFilter}
           value={input}
         />
         <div className="grid h-full w-1/4 cursor-pointer place-items-center lg:w-[10%]">
           <i className="fas fa-search text-lg text-gray-50"></i>
         </div>
       </section>
-      <ListOfSearch />
+      {fetchError ? (
+        <section className="mb-20 grid h-fit w-full place-items-center">
+          <img
+            src="/404.png"
+            alt="Error while fetching countries!"
+            width={500}
+          />
+          <h4 className="cursor-default text-xl font-semibold text-gray-50">
+            Error while fetching countries! 😔
+          </h4>
+        </section>
+      ) : (
+        <ListOfSearch countries={filteredCountries} />
+      )}
     </main>
   );
 };

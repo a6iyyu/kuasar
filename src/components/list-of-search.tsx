@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Country {
   capital: string;
@@ -9,54 +9,19 @@ interface Country {
   name: string;
 }
 
-const ListOfSearch: React.FC = () => {
-  const [countries, setCountries] = useState([] as Country[]);
+const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
   const [details, setDetails] = useState<number | null>(null);
-  const [fetchError, setFetchError] = useState<boolean>(false);
 
   const HandleDetails = (i: number) => {
     setDetails((prevDetails) => (prevDetails === i ? null : i));
   };
 
-  useEffect(() => {
-    fetch("https://countries.trevorblades.com/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        query: `
-          query GetCountries {
-            countries {
-              capital
-              code
-              currency
-              emojiU
-              languages {name}
-              name
-            }
-          }
-        `,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => setCountries(data.data.countries))
-      .catch((error) => {
-        console.error("Error: " + error), setFetchError(true);
-      });
-  }, []);
-
   return (
     <>
-      {fetchError ? (
-        <section className="mb-20 grid h-fit w-full place-items-center">
-          <img
-            src="/404.png"
-            alt="Error while fetching countries!"
-            width={500}
-          />
-          <h4 className="cursor-default text-xl font-semibold text-gray-50">
-            Error while fetching countries! 😔
-          </h4>
-        </section>
+      {countries.length === 0 ? (
+        <h4 className="mb-20 grid h-fit w-full cursor-default place-items-center text-xl font-semibold text-gray-50">
+          No countries found for your search.
+        </h4>
       ) : (
         <main className="mb-12 grid h-fit w-full grid-cols-1 gap-x-10 lg:grid-cols-2">
           {countries.map((country: Country, index: number) => (
@@ -81,9 +46,11 @@ const ListOfSearch: React.FC = () => {
                   {country["name"]} has {country["capital"]} as its capital and
                   its currency is the {country["currency"]}. Local people are
                   accustomed to using several languages spoken, such as:
-                  {(country["languages"] as Country[]).map((language: any, i: number) => (
-                    <li key={i}>{language["name"]}</li>
-                  ))}
+                  {(country["languages"] as Country[]).map(
+                    (language: any, i: number) => (
+                      <li key={i}>{language["name"]}</li>
+                    ),
+                  )}
                 </h5>
               )}
             </section>

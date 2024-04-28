@@ -4,7 +4,7 @@ import numberLists from "../types/number-lists";
 
 const ListOfFacts: React.FC = () => {
   return (
-    <main className="list-of-facts mx-auto mb-20 flex h-fit w-4/5 flex-col justify-between lg:flex-row">
+    <main className="list-of-facts mx-auto mb-12 flex h-fit w-4/5 flex-col justify-between lg:flex-row">
       <section
         className="absolute right-0 z-0 h-40 w-40"
         style={{ backgroundColor: "#1fddff", filter: "blur(9rem)" }}

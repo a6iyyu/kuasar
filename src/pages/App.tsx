@@ -21,6 +21,10 @@ const App: React.FC = () => {
     const AboutSection = null || (document.querySelector(".about-section") as HTMLElement);
     scrollIntoView(AboutButton, AboutSection);
 
+    const SummaryButton = null || (document.getElementById("summary") as HTMLElement);
+    const SummarySection = null || (document.querySelector(".summary-section") as HTMLElement);
+    scrollIntoView(SummaryButton, SummarySection);
+
     const SearchButton = null || (document.getElementById("search") as HTMLElement);
     const SearchSection = null || (document.querySelector(".search-section") as HTMLElement);
     scrollIntoView(SearchButton, SearchSection);
