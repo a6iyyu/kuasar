@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "../styles/tailwind.css";
 import ScrollToTop from "../components/scroll-to-top";
 import Header from "../components/header";
 import ScrollIndicator from "../components/scroll-indicator";
