@@ -16,9 +16,7 @@ const Header: React.FC = () => {
   window.addEventListener("scroll", handleHeaderSticky);
 
   return (
-    <header
-      className={`fixed z-50 grid h-28 w-full place-items-center transition-all duration-300 ease-in-out lg:h-36 ${headerSticky ? "bg-gradient-to-tr from-gray-900 to-gray-800 shadow-lg" : "bg-none"}`}
-    >
+    <header className={`fixed z-50 grid h-28 w-full place-items-center transition-all duration-300 ease-in-out lg:h-36 ${headerSticky ? "bg-gradient-to-tr from-gray-900 to-gray-800 shadow-lg" : "bg-none"}`}>
       <nav className="flex h-full w-4/5">
         <section className="flex h-full w-2/5 items-center">
           <a href="/" className="h-fit w-fit">

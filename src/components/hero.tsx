@@ -6,10 +6,7 @@ const Hero: React.FC = () => {
       className="hero mx-auto mb-40 mt-64 flex h-fit w-4/5 flex-col-reverse md:mt-72 xl:flex-row"
       style={{ letterSpacing: "0.075rem" }}
     >
-      <section
-        className="absolute z-0 h-40 w-40"
-        style={{ backgroundColor: "#ff85ad", filter: "blur(9rem)" }}
-      ></section>
+      <section className="absolute z-0 h-40 w-40" style={{ backgroundColor: "#ff85ad", filter: "blur(9rem)" }} ></section>
       <section className="z-10 mt-20 flex h-full w-full flex-col items-center xl:mt-0 xl:w-1/2 xl:items-start">
         <h2 className="cursor-default text-center text-4xl font-bold text-gray-50 xl:text-justify">
           Let's Get To Know Around The World!

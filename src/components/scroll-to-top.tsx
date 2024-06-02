@@ -11,9 +11,7 @@ const ScrollToTop: React.FC = () => {
     }
   };
 
-  const ScrollToTop = () => {
-    window.scrollTo({ behavior: "smooth", top: 0 });
-  };
+  const ScrollToTop = () => window.scrollTo({ behavior: "smooth", top: 0 });
 
   useEffect(() => {
     window.addEventListener("scroll", handleShowScroll);

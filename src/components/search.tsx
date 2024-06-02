@@ -59,10 +59,7 @@ const Search: React.FC = () => {
       <h5 className="my-8 cursor-default text-center text-lg font-medium text-gray-50 lg:text-justify">
         Search for the country you want to explore.
       </h5>
-      <section
-        className="mb-8 flex h-16 w-full rounded-full"
-        style={{ backgroundColor: "#211c1d" }}
-      >
+      <section className="mb-8 flex h-16 w-full rounded-full" style={{ backgroundColor: "#211c1d" }}>
         <input
           type="text"
           placeholder="Search . . ."
@@ -76,11 +73,7 @@ const Search: React.FC = () => {
       </section>
       {fetchError ? (
         <section className="mb-20 grid h-fit w-full place-items-center">
-          <img
-            src="/404.png"
-            alt="Error while fetching countries!"
-            width={500}
-          />
+          <img src="/404.png" alt="Error while fetching countries!" width={500} />
           <h4 className="cursor-default text-xl font-semibold text-gray-50">
             Error while fetching countries! 😔
           </h4>

@@ -12,9 +12,7 @@ interface Country {
 const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
   const [details, setDetails] = useState<number | null>(null);
 
-  const HandleDetails = (i: number) => {
-    setDetails((prevDetails) => (prevDetails === i ? null : i));
-  };
+  const HandleDetails = (i: number) => setDetails((prevDetails) => (prevDetails === i ? null : i));
 
   return (
     <>

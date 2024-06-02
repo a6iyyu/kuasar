@@ -25,15 +25,9 @@ const HamburgerMenu: React.FC = () => {
 
   return (
     <section className="hamburger-menu flex h-full w-3/5 items-center justify-end lg:hidden">
-      <i
-        className="fa-solid fa-bars cursor-pointer text-3xl text-gray-50"
-        onClick={() => setOpen(!open)}
-      ></i>
+      <i className="fa-solid fa-bars cursor-pointer text-3xl text-gray-50" onClick={() => setOpen(!open)}></i>
       {open && (
-        <div
-          className="absolute top-24 z-50 h-fit w-fit rounded-xl bg-slate-50"
-          data-aos={open ? "fade-down" : "fade-up"}
-        >
+        <div className="absolute top-24 z-50 h-fit w-fit rounded-xl bg-slate-50" data-aos={open ? "fade-down" : "fade-up"}>
           {menus.map((menu, i) => (
             <h5
               id={menu.toLowerCase()}
