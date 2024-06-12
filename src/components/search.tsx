@@ -59,7 +59,7 @@ const Search: React.FC = () => {
       <h5 className="my-8 cursor-default text-center text-lg font-medium text-gray-50 lg:text-justify">
         Search for the country you want to explore.
       </h5>
-      <section className="mb-8 flex h-16 w-full rounded-full" style={{ backgroundColor: "#211c1d" }}>
+      <section className="mb-8 flex h-16 w-full rounded-full bg-[#211c1d]">
         <input
           type="text"
           placeholder="Search . . ."

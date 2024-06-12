@@ -23,11 +23,7 @@ const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
       ) : (
         <main className="mb-12 grid h-fit w-full grid-cols-1 gap-x-10 lg:grid-cols-2">
           {countries.map((country: Country, index: number) => (
-            <section
-              key={index}
-              className="mb-8 cursor-default rounded-lg bg-gradient-to-tr from-gray-900 to-slate-800 text-gray-50"
-              style={{ boxShadow: "0.2rem 0.2rem 0 #bcbcbc" }}
-            >
+            <section key={index} className="mb-8 cursor-default rounded-lg bg-gradient-to-tr from-gray-900 to-slate-800 text-gray-50 [box-shadow:0.2rem_0.2rem_0_#bcbcbc]">
               <div className="mx-auto my-5 flex h-fit w-4/5 items-center justify-between font-semibold">
                 <h4
                   className="h-full w-fit cursor-pointer text-lg transition-all duration-500 ease-in-out hover:text-gray-300 hover:underline"
@@ -44,10 +40,9 @@ const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
                   {country["name"]} has {country["capital"]} as its capital and
                   its currency is the {country["currency"]}. Local people are
                   accustomed to using several languages spoken, such as:
-                  {(country["languages"] as Country[]).map(
-                    (language: any, i: number) => (
-                      <li key={i}>{language["name"]}</li>
-                    ),
+                  {(country["languages"] as Country[]).map((language: any, i: number) => (
+                    <li key={i}>{language["name"]}</li>
+                  ),
                   )}
                 </h5>
               )}

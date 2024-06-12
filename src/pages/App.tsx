@@ -16,20 +16,20 @@ const App: React.FC = () => {
       });
     };
 
-    const AboutButton = null || (document.getElementById("about") as HTMLElement);
-    const AboutSection = null || (document.querySelector(".about-section") as HTMLElement);
+    const AboutButton = null || (document.getElementById("about") as HTMLElement || null);
+    const AboutSection = null || (document.querySelector(".about-section") as HTMLElement || null);
     scrollIntoView(AboutButton, AboutSection);
 
-    const SummaryButton = null || (document.getElementById("summary") as HTMLElement);
-    const SummarySection = null || (document.querySelector(".summary-section") as HTMLElement);
+    const SummaryButton = null || (document.getElementById("summary") as HTMLElement || null);
+    const SummarySection = null || (document.querySelector(".summary-section") as HTMLElement || null);
     scrollIntoView(SummaryButton, SummarySection);
 
-    const SearchButton = null || (document.getElementById("search") as HTMLElement);
-    const SearchSection = null || (document.querySelector(".search-section") as HTMLElement);
+    const SearchButton = null || (document.getElementById("search") as HTMLElement || null);
+    const SearchSection = null || (document.querySelector(".search-section") as HTMLElement || null);
     scrollIntoView(SearchButton, SearchSection);
 
-    const GetToKnow = null || (document.querySelector(".get-to-know") as HTMLElement);
-    const ListOfFacts = null || (document.querySelector(".list-of-facts") as HTMLElement);
+    const GetToKnow = null || (document.querySelector(".get-to-know") as HTMLElement || null);
+    const ListOfFacts = null || (document.querySelector(".list-of-facts") as HTMLElement || null);
     scrollIntoView(GetToKnow, ListOfFacts);
   });
 
