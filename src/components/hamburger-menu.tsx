@@ -6,9 +6,7 @@ const HamburgerMenu: React.FC = () => {
 
   const HandleMenulick = (target: string) => {
     if (document.querySelector(`.${target}-section`)) {
-      (
-        (document.querySelector(`.${target}-section`) as HTMLElement) || null
-      ).scrollIntoView({
+      ((document.querySelector(`.${target}-section`) as HTMLElement) || null).scrollIntoView({
         behavior: "smooth",
       });
     }
