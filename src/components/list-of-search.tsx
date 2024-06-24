@@ -12,7 +12,7 @@ interface Country {
 const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
   const [details, setDetails] = useState<number | null>(null);
 
-  const HandleDetails = (i: number) => setDetails((prevDetails) => (prevDetails === i ? null : i));
+  const HandleDetails = (i: number) => setDetails(prevDetails => (prevDetails === i ? null : i));
 
   return (
     <>
@@ -25,10 +25,7 @@ const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
           {countries.map((country: Country, index: number) => (
             <section key={index} className="mb-8 cursor-default rounded-lg bg-gradient-to-tr from-gray-900 to-slate-800 text-gray-50 [box-shadow:0.2rem_0.2rem_0_#bcbcbc]">
               <div className="mx-auto my-5 flex h-fit w-4/5 items-center justify-between font-semibold">
-                <h4
-                  className="h-full w-fit cursor-pointer text-lg transition-all duration-500 ease-in-out hover:text-gray-300 hover:underline"
-                  onClick={() => HandleDetails(index)}
-                >
+                <h4 onClick={() => HandleDetails(index)} className="h-full w-fit cursor-pointer text-lg transition-all duration-500 ease-in-out hover:text-gray-300 hover:underline">
                   {country["name"]}
                 </h4>
                 <h4 className="h-full w-fit text-sm font-medium">
@@ -42,8 +39,7 @@ const ListOfSearch: React.FC<{ countries: Country[] }> = ({ countries }) => {
                   accustomed to using several languages spoken, such as:
                   {(country["languages"] as Country[]).map((language: any, i: number) => (
                     <li key={i}>{language["name"]}</li>
-                  ),
-                  )}
+                  ))}
                 </h5>
               )}
             </section>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import WebsiteMeta from "../components/website-meta";
 import ScrollToTop from "../components/scroll-to-top";
 import Header from "../components/header";
 import ScrollIndicator from "../components/scroll-indicator";
@@ -35,6 +36,7 @@ const App: React.FC = () => {
 
   return (
     <>
+      <WebsiteMeta />
       <ScrollToTop />
       <Header />
       <ScrollIndicator />

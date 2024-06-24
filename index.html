@@ -1,60 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rodgen | List Of Countries</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       @tailwind base;
       @tailwind components;
       @tailwind utilities;
-      * {
-        box-sizing: border-box;
-        font-family: "Plus Jakarta Sans", Times, sans-serif, serif;
-        margin: 0;
-        padding: 0;
-      }
-      @media screen and (max-width: 8192px) {
-        ::-webkit-scrollbar {
-          display: none;
-        }
-        body {
-          opacity: 0;
-        }
-      }
-      @media screen and (max-width: 3120px) {
-        html {
-          scroll-padding: 11rem;
-        }
-        header h5:not(header h5:last-child) {
-          margin-right: 5rem;
-        }
-        body {
-          background-image: linear-gradient(to right, #0c0c1e, #141414);
-          opacity: 1;
-        }
-      }
-      @media screen and (max-width: 960px) {
-        html {
-          scroll-padding: 9rem;
-        }
-      }
     </style>
   </head>
   <body class="flex h-fit w-full flex-col overflow-x-hidden">
     <div id="root"></div>
   </body>
   <script type="module" src="/src/main.tsx"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </html>

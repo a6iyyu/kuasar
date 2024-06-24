@@ -17,11 +17,7 @@ const Header: React.FC = () => {
         </section>
         <section className="flex h-full w-3/5 items-center justify-end">
           {menus.map((menu, i) => (
-            <h5
-              key={i}
-              className="hidden cursor-pointer text-lg font-medium text-gray-50 transition-all duration-300 ease-in-out [letter-spacing:0.1rem] hover:text-gray-300 hover:underline lg:flex"
-              id={menu.toLowerCase()}
-            >
+            <h5 key={i} className="hidden cursor-pointer text-lg font-medium text-gray-50 transition-all duration-300 ease-in-out [letter-spacing:0.1rem] hover:text-gray-300 hover:underline lg:flex" id={menu.toLowerCase()}>
               {menu}
             </h5>
           ))}

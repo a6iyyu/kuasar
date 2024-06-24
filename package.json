@@ -1,5 +1,6 @@
 {
   "name": "kuasar",
+  "description": "Rodgen, explore the world with one click on a single page application. This project is a recruitment stage for Frontend Developer internship at Kuasar.",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -9,16 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.1",
+    "aos": "^2.3.4",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-scroll-trigger": "^0.6.14"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/react-helmet-async": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
@@ -27,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.4.38",
+    "styled-components": "^6.1.11",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
