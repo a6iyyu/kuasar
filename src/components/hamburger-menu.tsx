@@ -16,13 +16,9 @@ const HamburgerMenu: React.FC = () => {
 
   useEffect(() => {
     AOS.init();
-
     const HandleOutside = (e: MouseEvent) => {
-      if (!(e.target as HTMLElement).closest(".hamburger-menu")) {
-        setOpen(false);
-      }
+      if (!(e.target as HTMLElement).closest(".hamburger-menu")) setOpen(false);
     };
-    
     document.body.addEventListener("click", HandleOutside);
     return () => document.body.removeEventListener("click", HandleOutside);
   }, [open]);

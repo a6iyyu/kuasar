@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import numberLists from "../types/number-lists";
+import numberLists from "../data/number-lists";
 
 const ListOfFacts: React.FC = () => {
   return (
